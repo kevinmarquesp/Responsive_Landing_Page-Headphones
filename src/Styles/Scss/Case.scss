@@ -1,0 +1,136 @@
+@import 'assets';
+
+
+.case-container {
+  position: relative;
+
+  // 2 colunas ocumando uma fração do todo cada...
+  grid-template-columns: repeat(2, 1fr);
+
+  .case-data {
+    padding: 5rem 0 3rem;
+  }
+}
+
+
+.case-image {
+  position: absolute;
+  left: -7rem;
+
+  width: 250px;
+}
+
+
+.case-description {
+  margin-bottom: $mb-1-5;
+  line-height: $text-line-height;
+}
+
+
+/* ―――――――――――――――――――― Descontos durante a compra ―――――――――――――――――――― */
+
+.discount-container {
+  background-color: $container-color;
+  border-radius: .75rem;
+
+  padding: 2rem 1.5rem;
+  position: relative;
+
+  .discount-title {
+    font-size: $h3-font-size;
+    margin-bottom: $mb-0-75;
+  }
+
+  .discount-description {
+    margin-bottom: $mb-1;
+  }
+}
+
+.discount-image {
+  width: 300px;
+
+  position: absolute;
+  top: 4rem;
+  right: -11rem;
+}
+
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+
+@media screen and (max-width: 340px) { // Telas pequenas
+  .case-container {
+    grid-template-columns: .6fr 1fr;
+
+    .case-description {
+      line-height: 1.5rem;
+    }
+
+    .case-data {
+      padding: 0;
+    }
+  }
+  
+  .case-image {
+    width: 220px;
+    top: -2rem;
+    left: -9rem;
+  }
+}
+
+
+@media screen and (min-width: 576px) { // Telas médias
+  .case-image {
+    position: initial;
+  }
+
+  .case-data {
+    padding: 0;
+  }
+
+  .case-container {
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+  }
+
+  // Descontos
+
+  .discount-image {
+    position: initial;
+  }
+
+  .discount-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+
+@media screen and (min-width: 767px) { // Telas grandes
+  .case-container {
+    column-gap: 5rem;
+  
+    .case-image {
+      width: 300px;
+    }
+
+    .case-description {
+      margin-bottom: $mb-2;
+    }
+  }
+
+  .discount-container {
+    grid-template-columns: 250px max-content;
+    justify-content: center;
+
+    column-gap: 5rem;
+    padding: 3rem 0;
+
+    .discount-title {
+      font-size: $h2-font-size;
+      margin-bottom: $mb-1;
+    }
+  }
+}

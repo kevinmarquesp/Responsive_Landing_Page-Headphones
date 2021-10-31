@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* ―――――――――――――――――――― 🔥 Google fonts ―――――――――――――――――――― */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* ―――――――――――――――――――― 🔥 Variáveis ―――――――――――――――――――― */
+:root {
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* ―――――――――――――――――――― 🔥 Classes reutilizáveis ―――――――――――――――――――― */
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section-title {
+  font-size: var(--bigger-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title_gradient {
+  background-image: linear-gradient(#3b3e40, #141515);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #0a0a0b;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  color: white;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #141515;
+}
+.button .button-icon {
+  font-size: 1.2rem;
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--normal-font-size);
+  color: #bdc0c2;
+  margin: 3rem 0 0 0;
+  background-color: #0f0f10;
+}
+@media screen and (min-width: 767px) {
+  html body {
+    margin: 0;
+  }
+  html body .section {
+    padding: 6rem 0 2rem;
+  }
+}
+
+h1, h2, h3 {
+  color: #f2f2f3;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input {
+  cursor: poiter;
+}
+button, button input, input, input input {
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ―――――――――――――――――――― 🔥 Layout da página ―――――――――――――――――――― */
+.main {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0 auto !important;
+  }
+}
+/* ―――――――――――――――――――― 🔥 Barra de rolagem ―――――――――――――――――――― */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #27292a;
+  border-radius: 0.5rem;
+  transition: 0.4s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #313335;
+}
+
+/*# sourceMappingURL=Main.css.map */

@@ -1,0 +1,109 @@
+@import 'assets';
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  body {
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    color: $text-color;
+
+    margin: $header-height 0 0 0;
+    background-color: $body-color;
+
+
+    @media screen and (min-width: 767px) {
+      & {
+        margin: 0;
+      }
+
+      .section {
+        padding: 6rem 0 2rem;
+      }
+    }
+  }
+}
+
+
+h1, h2, h3 {
+  color: $title-color;
+}
+
+
+ul {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+button, input {
+  cursor: poiter;
+
+  &, input {
+    border: none;
+    outline: none;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ―――――――――――――――――――― 🔥 Layout da página ―――――――――――――――――――― */
+
+.main {
+  overflow: hidden; // Para animação e imagens
+}
+
+
+.container {
+  max-width: 968px;
+  margin: 0 $mb-1-5; // Left & Right
+}
+
+
+.grid {
+  display: grid;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0 auto !important;
+  }
+}
+
+
+/* ―――――――――――――――――――― 🔥 Barra de rolagem ―――――――――――――――――――― */
+
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scroll-thumb-color;
+  border-radius: .5rem;
+  transition: $anim-1;
+
+  &:hover {
+    background-color: $scroll-thumb-color-alt;
+  }
+}
+

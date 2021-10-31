@@ -1,0 +1,146 @@
+@import 'assets';
+
+
+.home-image {
+  width: 250px;
+
+  position: absolute;
+  right: 1.5rem;
+  top: -16rem;
+}
+
+
+.home-data {
+  padding-top: 5rem;
+
+  .home-header {
+    position: relative;
+  }
+}
+
+
+.home-title {
+  font-size: $biggest-font-size;
+  line-height: 6rem;
+  white-space: nowrap;
+
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  
+  background-image: $text-gradient;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+.home-subtitle {
+  font-size: $big-font-size;
+  margin-bottom: $mb-2-5;
+}
+
+
+.home-title_description {
+  font-size: $h2-font-size;
+  font-weight: $font-medium;
+  margin-bottom: $mb-1;
+}
+
+
+.home-description {
+  margin-bottom: $mb-2-5;
+  line-height: $text-line-height;
+}
+
+
+.home-price {
+  font-size: $h3-font-size;
+  font-weight: $font-semi-bold;
+  margin-left: $mb-0-75;
+}
+
+
+/* ―――――――――――――――――――― Apoiadores do projeto ―――――――――――――――――――― */
+
+.sponsor-image {
+  width: 100px;
+}
+
+.sponsor-container {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(110px, 1fr)
+  );
+
+  row-gap: 5rem;
+  column-gap: 1rem;
+
+  align-items: center;
+  justify-items: center;
+}
+
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+
+@media screen and (max-width: 340px) { // Telas pequenas
+  .container {
+    margin: 0 $mb-1;
+  }
+
+  .section-title {
+    font-size: $big-font-size;
+  }
+
+  .home-image {
+    width: 200px;
+    top: -13rem;
+  }
+
+  .home-title {
+    top: -4rem;
+    font-size: $bigger-font-size;
+  }
+
+  .home-data {
+    padding-top: 1rem;
+  }
+
+  .home-description {
+    font-size: $small-font-size;
+    line-height: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width: 576px) { // Telas médias
+  .home-container {
+    grid-template-columns: .8fr 1fr;
+
+    .home-data {
+      padding-top: 2rem;
+    }
+  }
+
+  .home-image {
+    top: -7rem;
+    left: 0;
+  }
+}
+
+
+@media screen and (min-width: 767px) { // Telas grandes
+  .home-container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+
+    .home-image {
+      top: -9rem;
+      left: 4rem;
+    }
+
+    .home-data {
+      padding-top: 8rem;
+    }
+  }
+}

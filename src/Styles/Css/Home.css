@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/* ―――――――――――――――――――― 🔥 Google fonts ―――――――――――――――――――― */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* ―――――――――――――――――――― 🔥 Variáveis ―――――――――――――――――――― */
+:root {
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* ―――――――――――――――――――― 🔥 Classes reutilizáveis ―――――――――――――――――――― */
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section-title {
+  font-size: var(--bigger-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title_gradient {
+  background-image: linear-gradient(#3b3e40, #141515);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #0a0a0b;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  color: white;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #141515;
+}
+.button .button-icon {
+  font-size: 1.2rem;
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+.home-image {
+  width: 250px;
+  position: absolute;
+  right: 1.5rem;
+  top: -16rem;
+}
+
+.home-data {
+  padding-top: 5rem;
+}
+.home-data .home-header {
+  position: relative;
+}
+
+.home-title {
+  font-size: var(--biggest-font-size);
+  line-height: 6rem;
+  white-space: nowrap;
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background-image: linear-gradient(#3b3e40, #141515);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.home-subtitle {
+  font-size: var(--big-font-size);
+  margin-bottom: 2.5rem;
+}
+
+.home-title_description {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.home-description {
+  margin-bottom: 2.5rem;
+  line-height: 2rem;
+}
+
+.home-price {
+  font-size: var(--h3-font-size);
+  font-weight: 600;
+  margin-left: 0.75rem;
+}
+
+/* ―――――――――――――――――――― Apoiadores do projeto ―――――――――――――――――――― */
+.sponsor-image {
+  width: 100px;
+}
+
+.sponsor-container {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  row-gap: 5rem;
+  column-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+@media screen and (max-width: 340px) {
+  .container {
+    margin: 0 1rem;
+  }
+
+  .section-title {
+    font-size: var(--big-font-size);
+  }
+
+  .home-image {
+    width: 200px;
+    top: -13rem;
+  }
+
+  .home-title {
+    top: -4rem;
+    font-size: var(--bigger-font-size);
+  }
+
+  .home-data {
+    padding-top: 1rem;
+  }
+
+  .home-description {
+    font-size: var(--small-font-size);
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .home-container {
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .home-container .home-data {
+    padding-top: 2rem;
+  }
+
+  .home-image {
+    top: -7rem;
+    left: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .home-container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home-container .home-image {
+    top: -9rem;
+    left: 4rem;
+  }
+  .home-container .home-data {
+    padding-top: 8rem;
+  }
+}
+
+/*# sourceMappingURL=Home.css.map */

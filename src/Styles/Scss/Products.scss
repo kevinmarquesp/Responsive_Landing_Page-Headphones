@@ -1,0 +1,99 @@
+@import 'assets';
+
+
+.produtcs-line {
+  line-height: 4rem;
+}
+
+
+.products-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem 1.5rem;
+  padding-top: 3rem;
+}
+
+
+.products-card {
+  position: relative;
+  height: 132px;
+  padding: .75rem;
+
+  background-color: $container-color;
+  border-radius: .5rem;
+  display: grid;
+
+  height: calc(132px + 2.5rem);
+  padding-bottom: 2.5rem !important;
+
+  .products-content {
+    align-self: flex-end;
+  }
+}
+
+
+.products-image {
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 80px;
+  margin: 0 auto;
+}
+
+
+.products-title, .produtcs-price {
+  font-size: $small-font-size;
+}
+
+
+.produtcs-price {
+  font-weight: $font-semi-bold;
+}
+
+
+.products-button {
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+
+  padding: .5rem;
+  border-radius: .35rem;
+  cursor: pointer;
+}
+
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+
+@media screen and (max-width: 340px) { // Telas pequenas
+  .products-container {
+    grid-template-columns: 142px;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (min-width: 576px) { // Telas médias
+  .products-container {
+    grid-template-columns: repeat(3, 150px);
+    justify-content: center;
+  }
+}
+
+
+@media screen and (min-width: 767px) { // Telas grandes
+  .products-container {
+    grid-template-columns: repeat(3, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+  }
+
+  .products-card {
+    height: calc(152px + 2rem);
+    padding: .85rem;
+
+    .products-image {
+      width: 95px;
+    }
+  }
+}

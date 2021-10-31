@@ -1,0 +1,129 @@
+@import 'assets';
+
+$header-shadow: 0 5px 10px rgba(0 0 0 /0.5);
+
+
+.header {
+  background: transparent;
+  width: 100%;
+
+  position: fixed;
+  z-index: $z-fixed;
+  top: 0;
+  left: 0;
+
+  transition: $anim-2;
+}
+
+
+// Classe para quando a página estiver descendo
+
+.scroll-header {
+  background-color: $body-color;
+  box-shadow: $header-shadow;
+}
+
+
+/* ―――――――――――――――――――― 🔥 Barra de navegação ―――――――――――――――――――― */
+
+.nav {
+  height: $header-height;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .nav-logo {
+    display: flex;
+    width: 1.5rem;
+  }
+
+  .nav-toggle {
+    font-size: 1.2rem;
+    color: $white-color;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    background-color: $body-color;
+    box-shadow: $header-shadow;
+
+    padding: 4rem 0 3rem;
+    width: 100%;
+    
+    position: fixed;
+    left: 0;
+    top: -100%;
+
+    transition: $anim-1;
+  }
+}
+
+
+.nav-list {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+
+.nav-link {
+  font-size: $h2-font-size;
+  font-weight: $font-semi-bold;
+
+  text-transform: uppercase;
+  background-image: $text-gradient;
+  color: transparent;
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  transition: $anim-1;
+
+
+  &:hover, &.nav-link_active {
+    color: $white-color;
+  }
+}
+
+
+.nav-close {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  color: $white-color;
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 767px) { // Telas grandes
+  .nav {
+    height: calc(#{$header-height} + 1.5rem);
+
+    .nav-logo {
+      width: 2rem;
+    }
+  }
+
+  .nav-list {
+    flex-direction: row;
+    column-gap: 3.5rem;
+
+    .nav-link {
+      font-size: $normal-font-size;
+      text-transform: initial;
+    }
+  }
+
+  .nav-toggle, .nav-close {
+    display: none;
+  }
+}

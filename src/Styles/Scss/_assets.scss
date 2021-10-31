@@ -1,0 +1,152 @@
+
+/* ―――――――――――――――――――― 🔥 Google fonts ―――――――――――――――――――― */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+// Usage: 'Poppins', sans-serif;
+
+
+/* ―――――――――――――――――――― 🔥 Variáveis ―――――――――――――――――――― */
+
+$header-height: 3rem;
+
+// Paleta de cores
+
+$hue-color: 206;
+$black-color:            hsl($hue-color, 4%, 4%);
+$black-color-alt:        hsl($hue-color, 4%, 8%);
+$title-color:            hsl($hue-color, 4%, 95%);
+$text-color:             hsl($hue-color, 4%, 75%);
+$text-color-light:       hsl($hue-color, 4%, 65%);
+$body-color:             hsl($hue-color, 4%, 6%);
+$container-color:        hsl($hue-color, 4%, 10%);
+$scroll-thumb-color:     hsl($hue-color, 4%, 16%);
+$scroll-thumb-color-alt: hsl($hue-color, 4%, 20%);
+
+$white-color: white;
+
+$text-gradient: linear-gradient(
+  hsl($hue-color, 4%, 24%),
+  hsl($hue-color, 4%, 8%)
+);
+
+// Fonte e tipografia
+
+$body-font: 'Poppins', sans-serif;
+$font-semi-bold: 600;
+$font-medium: 500;
+
+$text-line-height:  2rem;
+
+:root {
+  --biggest-font-size: 5rem;
+  --bigger-font-size:  3.5rem;
+  --big-font-size:     2.5rem;
+  --h2-font-size:      1.25rem;
+  --h3-font-size:      1.125rem;
+  --normal-font-size:  .938rem;
+  --small-font-size:   .813rem;
+  --smaller-font-size: .75rem;
+
+  @media screen and (min-width: 968px) {
+    & {
+      --biggest-font-size: 7.5rem;
+      --bigger-font-size:  4.5rem;
+      --big-font-size:     4rem;
+      --h2-font-size:      1.5rem;
+      --h3-font-size:      1.25rem;
+      --normal-font-size:  1rem;
+      --small-font-size:   .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+}
+
+$biggest-font-size: var(--biggest-font-size);
+$bigger-font-size:  var(--bigger-font-size);
+$big-font-size:     var(--big-font-size);
+$h2-font-size:      var(--h2-font-size);
+$h3-font-size:      var(--h3-font-size);
+$normal-font-size:  var(--normal-font-size);
+$small-font-size:   var(--small-font-size);
+$smaller-font-size: var(--smaller-font-size);
+
+// Margens inferiores
+
+$mb-0-5:  .5rem;
+$mb-0-75: .75rem;
+$mb-1:    1rem;
+$mb-1-5:  1.5rem;
+$mb-2:    2rem;
+$mb-2-5:  2.5rem;
+
+// Z index
+
+$z-tooltip: 10;
+$z-fixed: 100;
+
+// Animações
+
+$anim-1: .4s ease-in-out;
+$anim-2: .3s ease;
+
+
+/* ―――――――――――――――――――― 🔥 Classes reutilizáveis ―――――――――――――――――――― */
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+
+.container {
+  max-width: 968px;
+  margin: 0 $mb-1-5;
+}
+
+
+.grid {
+  display: grid;
+}
+
+
+.section-title {
+  font-size: $bigger-font-size;
+  text-align: center;
+  margin-bottom: $mb-2-5;
+}
+
+
+.section-title_gradient {
+  background-image: $text-gradient;
+  color: transparent;
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+
+  background-color: $black-color;
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;  
+  color: $white-color;
+  
+  transition: $anim-2;
+
+  &:hover {
+    background-color: $black-color-alt;
+  }
+
+  .button-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .75rem;
+}
+

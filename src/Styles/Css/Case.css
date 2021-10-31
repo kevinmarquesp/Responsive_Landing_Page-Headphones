@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* ―――――――――――――――――――― 🔥 Google fonts ―――――――――――――――――――― */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* ―――――――――――――――――――― 🔥 Variáveis ―――――――――――――――――――― */
+:root {
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* ―――――――――――――――――――― 🔥 Classes reutilizáveis ―――――――――――――――――――― */
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section-title {
+  font-size: var(--bigger-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title_gradient {
+  background-image: linear-gradient(#3b3e40, #141515);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #0a0a0b;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  color: white;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #141515;
+}
+.button .button-icon {
+  font-size: 1.2rem;
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+.case-container {
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+}
+.case-container .case-data {
+  padding: 5rem 0 3rem;
+}
+
+.case-image {
+  position: absolute;
+  left: -7rem;
+  width: 250px;
+}
+
+.case-description {
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+}
+
+/* ―――――――――――――――――――― Descontos durante a compra ―――――――――――――――――――― */
+.discount-container {
+  background-color: #181a1b;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+.discount-container .discount-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.75rem;
+}
+.discount-container .discount-description {
+  margin-bottom: 1rem;
+}
+
+.discount-image {
+  width: 300px;
+  position: absolute;
+  top: 4rem;
+  right: -11rem;
+}
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+@media screen and (max-width: 340px) {
+  .case-container {
+    grid-template-columns: 0.6fr 1fr;
+  }
+  .case-container .case-description {
+    line-height: 1.5rem;
+  }
+  .case-container .case-data {
+    padding: 0;
+  }
+
+  .case-image {
+    width: 220px;
+    top: -2rem;
+    left: -9rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .case-image {
+    position: initial;
+  }
+
+  .case-data {
+    padding: 0;
+  }
+
+  .case-container {
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+  }
+
+  .discount-image {
+    position: initial;
+  }
+
+  .discount-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 767px) {
+  .case-container {
+    column-gap: 5rem;
+  }
+  .case-container .case-image {
+    width: 300px;
+  }
+  .case-container .case-description {
+    margin-bottom: 2rem;
+  }
+
+  .discount-container {
+    grid-template-columns: 250px max-content;
+    justify-content: center;
+    column-gap: 5rem;
+    padding: 3rem 0;
+  }
+  .discount-container .discount-title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+  }
+}
+
+/*# sourceMappingURL=Case.css.map */

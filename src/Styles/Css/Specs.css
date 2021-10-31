@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* ―――――――――――――――――――― 🔥 Google fonts ―――――――――――――――――――― */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* ―――――――――――――――――――― 🔥 Variáveis ―――――――――――――――――――― */
+:root {
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* ―――――――――――――――――――― 🔥 Classes reutilizáveis ―――――――――――――――――――― */
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section-title {
+  font-size: var(--bigger-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title_gradient {
+  background-image: linear-gradient(#3b3e40, #141515);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #0a0a0b;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  color: white;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #141515;
+}
+.button .button-icon {
+  font-size: 1.2rem;
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+.specs-container {
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+}
+.specs-container .specs-content {
+  row-gap: 1.5rem;
+}
+
+.specs-data {
+  display: grid;
+  row-gap: 0.25rem;
+}
+.specs-data .specs-icon {
+  font-size: 1.2rem;
+  color: white;
+}
+.specs-data .specs-title {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+.specs-data .specs-subtitle {
+  font-size: var(--smaller-font-size);
+}
+
+.specs-data:nth-child(1), .specs-data:nth-child(4) {
+  margin-left: 1.5rem;
+}
+
+.specs-image {
+  position: absolute;
+  right: -4rem;
+  top: 2rem;
+  width: 250px;
+}
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+@media screen and (max-width: 340px) {
+  .specs-image {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .specs-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .specs-container .specs-image {
+    position: initial;
+  }
+}
+@media screen and (min-width: 767px) {
+  .specs-image {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=Specs.css.map */

@@ -1,0 +1,139 @@
+@import 'assets';
+
+
+.footer-container {
+  margin-top: 20vh !important;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+  row-gap: 2rem;
+
+  .footer-logo {
+    width: 2rem;
+  }
+}
+
+
+.footer-title {
+  font-size: $h3-font-size;
+  font-weight: $font-medium;
+  margin-bottom: $mb-1;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+
+  .footer-link {
+    color: $text-color;
+    transition: $anim-2;
+
+    &:hover {
+      color: $white-color;
+    }
+  }
+}
+
+
+.footer-form {
+  background-color: $container-color;
+  border-radius: .5rem;
+
+  margin-bottom: $mb-2;
+  padding: .5rem .75rem;
+
+  display: flex;
+  column-gap: .5rem;
+
+  .footer-input {
+    background-color: transparent;
+    width: 100%;
+    padding-left: 1rem;
+
+    color: $white-color;
+    font-size: $normal-font-size;
+
+    &::placeholder {
+      color: $text-color;
+    }
+  }
+
+  .button {
+    white-space: nowrap;
+  }
+}
+
+
+.footer-social {
+  display: flex;
+  column-gap: 1.25rem;
+
+  .footer-social_link {
+    background-color: $container-color;
+    color: $text-color;
+    font-size: 1.25rem;
+
+    padding: .5rem;
+    border-radius: .25rem;
+    display: inline-flex;
+
+    transition: $anim-2;
+
+    &:hover {
+       background-color: $black-color;
+       color: $white-color;
+    }
+  }
+}
+
+
+.footer-copy {
+  margin-top: 5rem;
+  text-align: center;
+
+  .footer-copy_link {
+    font-size: $smaller-font-size;
+    color: $text-color-light;
+  }
+}
+
+
+/* ―――――――――――――――――――― De volta ao topo ―――――――――――――――――――― */
+
+.scroll_up-button {
+  position: fixed;
+  right: 1rem;
+  bottom: -100%;
+
+  background-color: $container-color;
+  padding: .45rem .6rem;
+  color: $text-color;
+
+  box-shadow: 3px 3px 10px rgba(0 0 0 / .5);
+  border-radius: .25rem;
+
+  z-index: $z-tooltip;
+  cursor: pointer;
+  transition: $anim-1;
+
+  &:hover {
+    background-color: $black-color;
+  }
+
+  .scroll_up-icon {
+    color: $white-color;
+    font-size: 1.35rem;
+  }
+}
+
+
+/* ―――――――――――――――――――― 🔥 Media Queries ―――――――――――――――――――― */
+
+@media screen and (min-width: 767px) { // Telas grandes
+  .footer-container {
+    grid-template-columns: .4fr .7fr .7fr 1fr;
+  }
+}
