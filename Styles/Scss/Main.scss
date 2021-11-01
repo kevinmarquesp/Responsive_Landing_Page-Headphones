@@ -11,6 +11,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  max-width: 100vw;
 
   body {
     font-family: $body-font;
@@ -68,7 +69,7 @@ img {
 /* ―――――――――――――――――――― 🔥 Layout da página ―――――――――――――――――――― */
 
 .main {
-  overflow: hidden; // Para animação e imagens
+  overflow-x: hidden; // Para animação e imagens
 }
 
 

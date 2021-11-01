@@ -37,6 +37,23 @@ sr.reveal(".specs-image, .discount-image", {origin: "right"});
 sr.reveal(".case-image", {origin: "top"});
 sr.reveal(".case-data");
 
+/*
+ *  Caro leitor:
+ *  
+ *  Por alguma razão, o site quebra no modo mobile sem o próximo
+ *  comando. O site fica com uma largura maior que a da tela e o 
+ *  elemento <html> fica todo jogado na esquerda, o que, por sua
+ *  vez, quebra a barra de navegação.
+ *  
+ *  Eu tentei  mudar isso alterando  o estilo,  mas só funcionou
+ *  quando eu  fiz isso manualmente  pelo JavaScript.  Não sei o
+ *  porque isso ter acontecido  e nem como resolver,  sinta-se a
+ *  vontade em tentar descobrir,  caso contrário,  não tire essa
+ *  linha do código...
+ */
+
+document.body.style.overflowX = "hidden";
+
 
 function scrollUp() {
   if(scrollY >= 200) {
@@ -47,7 +64,7 @@ function scrollUp() {
 }
 
 function scrollActive() {
-  const scrollY = window.pageYOffset; // ???
+  const scrollY = window.pageYOffset;
 
   sections.forEach(e => {
     const sectionHeight = e.offsetHeight;
