@@ -1,27 +1,25 @@
 
 # Responsive Landing Page 🎧
 
-Eu criei este projeto com o objetivo de estudar *patterns* de alguns programadores na hora de estruturar um projeto e na hora de programar, e também a fazer animações durante o *scroll* da página. Além disso, queria adaptar um projeto escrito inicialmente em *CSS* para usar o *SCSS* no lugara, tentei também separar os estilos da página inteira em arquivos diferentes.
+I started this project just for study *patterns* for structuring a project and make a beaty code, and to make animations when the page is scrolling down. Moreover, I wanted to adapt some *CSS* project to *SCSS*, and I tryed to organize the files to make the whole project more easy to read and understand.
 
-Inicialmente, era para isso ser somente um projeto bobo para treinar a programar, mas eu consegui resolver alguns bugs e melhorar a interface em alguns pontos. Portanto, não estranhe se os mus *commits* estejam todos na *branch* *main* 😅 (Eu não costumo fazer isso).
+At the beggining, it was meant to be just a silly project to learn some of the basis of web development, but I managed to fix some bugs and improve the interface in some points. Therefore, don't find weird if my *commits* ended up being in the same *branch* 😅 (Usualy, I do't make stuffs like that).
 
-E claro, eu não iria simplesmente copiar o código de outra pessoa e dizer que eu evolui... 💪
+Of course, I wouldn't just copy someone else's code and say I evolved without make some changes… 💪
 
-- Tutorial do YouTube: https://youtu.be/wXnlHIvKnTM
-- Repositório do tutorial: https://github.com/bedimcode/responsive-landing-page-headphones
-- **Live preview** do projeto: https://kevinmarquesp.github.io/Responsive_Landing_Page-Headphones/
+- YouTube tutorial: https://youtu.be/wXnlHIvKnTM
+- Tutorial repo: https://github.com/bedimcode/responsive-landing-page-headphones
+- Project **live preview**: https://kevinmarquesp.github.io/Responsive_Landing_Page-Headphones/
 
 
-## Coisas que eu aprendi
+## What I learned in this little adventure
 
-1. Eu finalmente pude colocar em prática o que eu aprendi estudando *grid layout*, ainda aprendi alguns comandos novos.
+1. Finally, I did can use my CSS grid layout study in practise, and even learned some new tricks with that...
 
-2. Aprendi um estilo de *navbar* diferente do que costumo usar, além disso, aprendi a destacar o botão da barra de navegação quando a página estiver na posição da sessão que represente o link.
+2. I learned a different navbar style that I'm not used to use, and I learned how to highlight some text when the page is in a specific position.
 
-3. Durante o projeto, eu testei vários editores diferentes. Eu costumo usar o *Neovim* para os meus projetos, mas eu decidi começar esse usando o *Visual Studio Code*. Foi muito produtivo, devo adimitir, mas o *VS Code* é um programa muito pesádo, então eu fui testar o *Sublime Text*. Agora o *Sublime Text* é o meu editor padrão para quando eu for estudar (porque eu não customizei tanto quanto o *Neovim* e não é tão pesado e complicado quanto o *VS Code*).
+3. I found an *JavaScript* library (**Scroll Reveal**) that is more easy to use an make animations when the page is scrolling.
 
-4. Acabei encontrando uma biblioteca para *JavaScritp* (**Scroll Reveal**) fácil de usar para fazer as animações durante a rolágem da página.
+4. I learned to create the "back to top" button (it was more easier than I thought).
 
-5. Aprendi a fazer o botão "volte ao topo" (foi muito mais fácil do que imaginei).
-
-6. Entendi o quão importante é manter o código organizado. Durante a criação do projeto, eu tive que lidar com alguns bugs na página e com as variáveis, se eu não tivesse estruturado o código e os arquivos do jeito que eu fiz, levaria mais tempo para encontrar essas falhas...
+5. OGANIZED CODE HELP TO FIND BUGS.
