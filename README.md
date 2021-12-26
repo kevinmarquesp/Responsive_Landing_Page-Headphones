@@ -22,4 +22,4 @@ Of course, I wouldn't just copy someone else's code and say I evolved without ma
 
 4. I learned to create the "back to top" button (it was more easier than I thought).
 
-5. OGANIZED CODE HELP TO FIND BUGS.
+5. ORGANIZED CODE HELP TO FIND BUGS!!!1!!
